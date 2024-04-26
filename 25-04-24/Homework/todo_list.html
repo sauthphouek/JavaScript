@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>My To Do List</h2>
+    <input type="text" id="taskInput" />
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+    <script>
+      function addTask() {
+        const taskInput = document.getElementById("taskInput");
+        if (taskInput.value == "") {
+          alert("Task must be filled out");
+          return false;
+        } else {
+          var task = taskInput.value;
+          var list = document.getElementById("taskList");
+          var item = document.createElement("li");
+          item.appendChild(document.createTextNode(task));
+          list.appendChild(item);
+        }
+      }
+    </script>
+  </body>
+</html>

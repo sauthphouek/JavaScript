@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <img
+      id="slide"
+      style="width: 50%; height: 500px; display: block; margin: 0 auto"
+    />
+
+    <script>
+      var images = [
+        // image 1
+        "images/image_1.png",
+        // image 2
+        "images/image_2.png",
+        // image 3
+        "images/image_3.png",
+      ];
+      var currentIndex = 0;
+      function nextImage() {
+        if (currentIndex === images.length) {
+          currentIndex = 0;
+        }
+        document.getElementById("slide").src = images[currentIndex];
+        currentIndex++;
+      }
+      setInterval(nextImage, 2000);
+    </script>
+  </body>
+</html>
