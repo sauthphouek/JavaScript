@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #fb0b0b"
+    ></canvas>
+    <script>
+      var canvas = document.getElementById("myCanvas");
+      var ctx = canvas.getContext("2d");
+      var posx = 0;
+      function draw() {
+        clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillRect(posx, 0, 50, 50);
+        // red
+        ctx.fillStyle = "#FF0000";
+        posx++;
+        if (posx > canvas.width) {
+          posx = 0;
+        }
+      }
+
+      setInterval(draw, 10);
+    </script>
+  </body>
+</html>
